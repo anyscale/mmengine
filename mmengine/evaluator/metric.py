@@ -43,9 +43,9 @@ class BaseMetric(metaclass=ABCMeta):
     def __init__(self,
                  collect_device: str = 'cpu',
                  prefix: Optional[str] = None,
-                 collect_dir: Optional[str] = None) -> None:
+                 collect_dir: Optional[str] = "/mnt/cluster_storage/collect_dir") -> None:
         if collect_dir is not None and collect_device != 'cpu':
-            raise ValueError('`collec_dir` could only be configured when '
+            raise ValueError('`collect_dir` could only be configured when '
                              "`collect_device='cpu'`")
 
         self._dataset_meta: Union[None, dict] = None
