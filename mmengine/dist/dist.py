@@ -951,7 +951,7 @@ def collect_results(results: list,
 
 def collect_results_cpu(result_part: list,
                         size: int,
-                        tmpdir: Optional[str] = None) -> Optional[list]:
+                        tmpdir: Optional[str] = "/mnt/cluster_storage/tmpdir") -> Optional[list]:
     """Collect results under cpu mode.
 
     On cpu mode, this function will save the results on different gpus to
