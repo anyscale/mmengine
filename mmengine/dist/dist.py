@@ -906,7 +906,7 @@ def gather_object(data: Any,
 def collect_results(results: list,
                     size: int,
                     device: str = 'cpu',
-                    tmpdir: Optional[str] = None) -> Optional[list]:
+                    tmpdir: Optional[str] = "/mnt/cluster_storage/tmpdir") -> Optional[list]:
     """Collected results in distributed environments.
 
     Args:
